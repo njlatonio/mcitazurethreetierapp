@@ -140,3 +140,44 @@ variable "dbtier_ns_rules_source_address_prefix"{
 variable "dbtier_ns_rules_destination_address_prefix"{
   type=string
 }
+
+variable "webvm_name"{
+  type=string
+}
+variable "webvm_size"{
+  type=string
+}
+variable "administrator_login"{
+  type=string
+}
+variable "administrator_login_password"{
+  type=string
+}
+variable "webvm_os_disk_caching"{
+  type=string
+}
+variable "webvm_os_disk_storage_account_type"{
+  type=string
+}
+variable "webvm_source_image_reference_publisher"{
+  type=string
+}
+variable "webvm_source_image_reference_offer"{
+  type=string
+}
+variable "webvm_source_image_reference_sku"{
+  type=string
+}
+variable "webvm_source_image_reference_version"{
+  type=string
+}
+
+variable "webnic_name"{
+  type=string
+}
+variable "webnic_ip_configuration_name"{
+  type=string
+}
+variable "webnic_ip_configuration_private_ip_address_allocation"{
+  type=string
+}
