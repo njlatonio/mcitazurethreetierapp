@@ -50,30 +50,39 @@ variable "apptier_nsg_name"{
 variable "dbtier_nsg_name"{
   type=string
 }
-variable "webtier_ns_rules_name"{
+variable "webtier_ns_rules_name_http"{
   type=string
 }
-variable "webtier_ns_rules_priority"{
+variable "webtier_ns_rules_priority_http"{
   type=number
 }
 variable "webtier_ns_rules_direction"{
-  type=number
+  type=string
 }
 variable "webtier_ns_rules_access"{
-  type=number
+  type=string
 }
 variable "webtier_ns_rules_protocol"{
-  type=number
+  type=string
 }
 variable "webtier_ns_rules_source_port_range"{
-  type=number
+  type=string
 }
-variable "webtier_ns_rules_destination_port_range"{
-  type=number
+variable "webtier_ns_rules_destination_port_range_http"{
+  type=string
 }
 variable "webtier_ns_rules_source_address_prefix"{
-  type=number
+  type=string
 }
 variable "webtier_ns_rules_destination_address_prefix"{
+  type=string
+}
+variable "webtier_ns_rules_name_https"{
+  type=string
+}
+variable "webtier_ns_rules_priority_https"{
   type=number
+}
+variable "webtier_ns_rules_destination_port_range_https"{
+  type=string
 }
