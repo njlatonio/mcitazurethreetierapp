@@ -42,3 +42,38 @@ resource "azurerm_network_security_rule" "web_allow_https" {
   network_security_group_name = azurerm_network_security_group.web_nsg.name
 }
 
+# Web Tier Virtual Machine
+resource "azurerm_linux_virtual_machine" "web_vm" {
+  name                = var.webvm_name
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
+  size                = var.webvm_size
+  admin_username      = var.administrator_login
+  admin_password      = var.administrator_login_password
+  network_interface_ids = [
+    azurerm_network_interface.web_nic.id,
+  ]
+  os_disk {
+    caching              = var.webvm_os_disk_caching
+    storage_account_type = var.webvm_os_disk_storage_account_type
+  }
+  source_image_reference {
+    publisher = var.webvm_source_image_reference_publisher
+    offer     = var.webvm_source_image_reference_offer
+    sku       = var.webvm_source_image_reference_sku
+    version   = var.webvm_source_image_reference_version
+  }
+}
+
+resource "azurerm_network_interface" "web_nic" {
+  name                = var.webnic_name
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  ip_configuration {
+    name                          = var.webnic_ip_configuration_name
+    subnet_id                     = azurerm_subnet.web.id
+    private_ip_address_allocation = var.webnic_ip_configuration_private_ip_address_allocation
+  }
+}
+
+
