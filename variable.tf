@@ -86,3 +86,57 @@ variable "webtier_ns_rules_priority_https"{
 variable "webtier_ns_rules_destination_port_range_https"{
   type=string
 }
+variable "apptier_ns_rules_name"{
+  type=string
+}
+variable "apptier_ns_rules_priority"{
+  type=number
+}
+variable "apptier_ns_rules_direction"{
+  type=string
+}
+variable "apptier_ns_rules_access"{
+  type=string
+}
+variable "apptier_ns_rules_protocol"{
+  type=string
+}
+variable "apptier_ns_rules_source_port_range"{
+  type=string
+}
+variable "apptier_ns_rules_destination_port_range"{
+  type=string
+}
+variable "apptier_ns_rules_source_address_prefix"{
+  type=string
+}
+variable "apptier_ns_rules_destination_address_prefix"{
+  type=string
+}
+variable "dbtier_ns_rules_name"{
+  type=string
+}
+variable "dbtier_ns_rules_priority"{
+  type=number
+}
+variable "dbtier_ns_rules_direction"{
+  type=string
+}
+variable "dbtier_ns_rules_access"{
+  type=string
+}
+variable "dbtier_ns_rules_protocol"{
+  type=string
+}
+variable "dbtier_ns_rules_source_port_range"{
+  type=string
+}
+variable "dbtier_ns_rules_destination_port_range"{
+  type=string
+}
+variable "dbtier_ns_rules_source_address_prefix"{
+  type=string
+}
+variable "dbtier_ns_rules_destination_address_prefix"{
+  type=string
+}
