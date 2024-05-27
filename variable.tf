@@ -23,3 +23,24 @@ variable "vnet_name"{
 variable "address_space"{
   type=list(string)
 }
+variable "webtier_name"{
+  type=string
+}
+variable "webtier_address_prefixes"{
+  type=list(string)
+}
+variable "apptier_name"{
+  type=string
+}
+variable "apptier_address_prefixes"{
+  type=list(string)
+}
+variable "dbtier_name"{
+  type=string
+}
+variable "dbtier_address_prefixes"{
+  type=list(string)
+}
+variable "webtier_nsg_name"{
+  type=string
+}
