@@ -16,14 +16,29 @@ resource "azurerm_network_security_group" "web_nsg" {
 # Network Security Rules
 resource "azurerm_network_security_rule" "web_allow_http" {
   resource_group_name = azurerm_resource_group.rg.name
-  name                        = var.webtier_ns_rules_name
-  priority                    = var.webtier_ns_rules_priority
+  name                        = var.webtier_ns_rules_name_http
+  priority                    = var.webtier_ns_rules_priority_http
   direction                   = var.webtier_ns_rules_direction
   access                      = var.webtier_ns_rules_access
   protocol                    = var.webtier_ns_rules_protocol
   source_port_range           = var.webtier_ns_rules_source_port_range
-  destination_port_range      = var.webtier_ns_rules_destination_port_range
+  destination_port_range      = var.webtier_ns_rules_destination_port_range_http
   source_address_prefix       = var.webtier_ns_rules_source_address_prefix
   destination_address_prefix  = var.webtier_ns_rules_destination_address_prefix
   network_security_group_name = azurerm_network_security_group.web_nsg.name
 }
+
+resource "azurerm_network_security_rule" "web_allow_https" {
+  resource_group_name = azurerm_resource_group.rg.name
+  name                        = var.webtier_ns_rules_name_https
+  priority                    = var.webtier_ns_rules_priority_http
+  direction                   = var.webtier_ns_rules_direction
+  access                      = var.webtier_ns_rules_access
+  protocol                    = var.webtier_ns_rules_protocol
+  source_port_range           = var.webtier_ns_rules_source_port_range
+  destination_port_range      = var.webtier_ns_rules_destination_port_range_https
+  source_address_prefix       = var.webtier_ns_rules_source_address_prefix
+  destination_address_prefix  = var.webtier_ns_rules_destination_address_prefix
+  network_security_group_name = azurerm_network_security_group.web_nsg.name
+}
+
