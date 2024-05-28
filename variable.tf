@@ -259,3 +259,9 @@ variable "mysql_database_charset"{
 variable "mysql_database_collation"{
   type=string
 }
+variable "three_tier_app_resource_group_name"{
+  type=string
+}
+variable "three_tier_app_location"{
+  type=string
+}
