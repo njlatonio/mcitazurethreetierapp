@@ -75,3 +75,5 @@ mysql_server_ssl_enforcement_enabled=true
 mysql_database_name="exampledb"
 mysql_database_charset="utf8"
 mysql_database_collation="utf8_general_ci"
+three_tier_app_resource_group_name="mcitthreetiermodule"
+three_tier_app_location="West Europe"
