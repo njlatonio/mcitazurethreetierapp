@@ -181,3 +181,81 @@ variable "webnic_ip_configuration_name"{
 variable "webnic_ip_configuration_private_ip_address_allocation"{
   type=string
 }
+
+variable "appvm_name"{
+  type=string
+}
+variable "appvm_size"{
+  type=string
+}
+variable "appvm_os_disk_caching"{
+  type=string
+}
+variable "appvm_os_disk_storage_account_type"{
+  type=string
+}
+variable "appvm_source_image_reference_publisher"{
+  type=string
+}
+variable "appvm_source_image_reference_offer"{
+  type=string
+}
+variable "appvm_source_image_reference_sku"{
+  type=string
+}
+variable "appvm_source_image_reference_version"{
+  type=string
+}
+
+variable "appnic_name"{
+  type=string
+}
+variable "appnic_ip_configuration_name"{
+  type=string
+}
+variable "appnic_ip_configuration_private_ip_address_allocation"{
+  type=string
+}
+
+variable "mysql_server_name"{
+  type=string
+}
+variable "db_admin_username"{
+  type=string
+}
+variable "db_admin_password"{
+  type=string
+}
+variable "mysql_server_sku_name"{
+  type=string
+}
+variable "mysql_server_storage_mb"{
+  type=number
+}
+variable "mysql_server_version"{
+  type=string
+}
+variable "mysql_server_auto_grow_enabled"{
+  type=bool
+}
+variable "mysql_server_backup_retention_days"{
+  type=number
+}
+variable "mysql_server_geo_redundant_backup_enabled"{
+  type=bool
+}
+variable "mysql_server_public_network_access_enabled"{
+  type=bool
+}
+variable "mysql_server_ssl_enforcement_enabled"{
+  type=bool
+}
+variable "mysql_database_name"{
+  type=string
+}
+variable "mysql_database_charset"{
+  type=string
+}
+variable "mysql_database_collation"{
+  type=string
+}
