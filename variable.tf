@@ -265,3 +265,9 @@ variable "three_tier_app_resource_group_name"{
 variable "three_tier_app_location"{
   type=string
 }
+variable "three_tier_app_count_resource_group_name"{
+  type=string
+}
+variable "three_tier_app_count_location"{
+  type=string
+}
