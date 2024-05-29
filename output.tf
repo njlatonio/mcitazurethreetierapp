@@ -7,3 +7,7 @@ output "web_vm_public_ip" {
 output "module_web_vm_public_ip" {
   value = module.three_tier_app.module_web_vm_public_ip
 }
+
+output "module_web_vm_public_ip_count" {
+  value = [for i in range(var.instance_count) : module.three_tier_app_count[i].module_web_vm_public_ip_count]
+}
