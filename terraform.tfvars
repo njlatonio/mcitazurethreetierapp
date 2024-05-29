@@ -79,3 +79,4 @@ three_tier_app_resource_group_name="mcitthreetiermodule"
 three_tier_app_location="West Europe"
 three_tier_app_count_resource_group_name="mcitthreetiermodulecount"
 three_tier_app_count_location="West Europe"
+instance_count=3
