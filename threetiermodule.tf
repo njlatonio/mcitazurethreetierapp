@@ -10,8 +10,8 @@ module "three_tier_app" {
 
 module "three_tier_app_count" {
   source              = "./modulethreetierapp_count/"
-  resource_group_name = "mcitthreetiermodulecount"
-  location            = "West Europe"
+  resource_group_name = var.three_tier_app_count_resource_group_name
+  location            = var.three_tier_app_count_location
   admin_username      = var.administrator_login
   admin_password      = var.administrator_login_password
   db_admin_username   = var.db_admin_username
